@@ -1,9 +1,8 @@
-
 #ifndef PRO_H_INCLUDED
 #define PRO_H_INCLUDED
 #define MAX_SPACE 100
 
-
+int x=0,y=0,n=1;
 bool gameEnd=false;
 bool leftMovement=false;
 bool rightMovement=false;
@@ -14,6 +13,8 @@ bool rightMovement2=false;
 bool upMovement2=false;
 bool downMovement2=false;
 
+int randomNum;
+int randomNum1;
 
 void left2()
 {
@@ -79,6 +80,8 @@ void down()
 int maxHealth=500;
 int yourHealthT1=maxHealth;
 int yourHealthT2=maxHealth;
+int yourHealthT3=maxHealth;
+int yourHealthT4=maxHealth;
 char Map1[MAX_SPACE][MAX_SPACE]=
 {
     "###############################################################",
@@ -89,7 +92,7 @@ char Map1[MAX_SPACE][MAX_SPACE]=
     "#               #                                  #        # #",
     "#               #               #                  #        # #",
     "#               #         #######                  #        # #",
-    "#               ####                               #        # #",
+    "#     L         ####                               #   G    # #",
     "#                                                  #        # #",
     "#                         #######          #########        # #",
     "#                 ####          #                          #  #",
