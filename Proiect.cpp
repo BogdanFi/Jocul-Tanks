@@ -9,6 +9,7 @@ int main()
 {
     cout<<"Alegeti Dificulatea n>=25 :";
     cin>>n;
+    cout<<endl;
     srand(time(NULL));
     system("color 0B");
     while (gameEnd==false)
@@ -21,7 +22,7 @@ int main()
             cout<<Map1[i] << endl;
 
         }
-        cout<<"T1Health"<<yourHealthT1<<"/"<<maxHealth<<"       "<<"T2Health"<<yourHealthT2<<"/"<<maxHealth<<"       "<<"T3Health"<<yourHealthT3<<"/"<<maxHealth<<"       "<<"T4Health"<<yourHealthT4<<"/"<<maxHealth;
+        cout<<"T1Health"<<yourHealthT1<<"/"<<maxHealth<<"      "<<"T2Health"<<yourHealthT2<<"/"<<maxHealth<<"      "<<"T3Health"<<yourHealthT3<<"/"<<maxHealth<<"      "<<"T4Health"<<yourHealthT4<<"/"<<maxHealth;
         for( y=0; y<25; y++)
         {
             for( x=0; x<63; x++)
