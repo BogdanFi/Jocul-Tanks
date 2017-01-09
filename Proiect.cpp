@@ -189,3 +189,169 @@ int main()
                     break;
                         
                     case 'R' :
+                        if(GetAsyncKeyState(0x41)!=0&& GetAsyncKeyState(0x58)==0)
+                    {
+
+                        left();
+                        int newX= x-1;
+                        switch(Map1[y][newX])
+                        {
+
+                        case ' ':
+
+                            Map1[y][x]=' ';
+                            x--;
+                            Map1[y][newX]='R';
+
+                            break;
+                        }
+
+
+                    }
+                    if(GetAsyncKeyState(0x53)!=0&& GetAsyncKeyState(0x58)==0)
+                    {
+
+                        down();
+                        int newY= y+1;
+                        switch(Map1[newY][x])
+                        {
+
+                        case ' ':
+
+                            Map1[newY][x]=' ';
+                            y++;
+                            Map1[newY][x]='R';
+                            Map1[newY-1][x]=' ';
+
+                            break;
+                        }
+
+
+                    }
+                    if(GetAsyncKeyState(0x57)!=0&& GetAsyncKeyState(0x58)==0)
+                    {
+
+                        up();
+                        int newY= y-1;
+
+                        switch(Map1[newY][x])
+                        {
+
+                        case ' ':
+
+                            Map1[newY][x]=' ';
+                            y--;
+                            Map1[newY][x]='R';
+                            Map1[newY+1][x]=' ';
+
+                            break;
+                        }
+
+
+                    }
+                    if (GetAsyncKeyState(0x44)!=0&&GetAsyncKeyState(0x58)==0)
+                    {
+                        right();
+                        int newX = x+1;
+
+                        switch (Map1[y][newX])
+                        {
+
+                        case ' ':
+                            Map1[y][x]=' ';
+                            x++;
+                            Map1[y][newX]='R';
+
+                            break;
+                        }
+
+                    }
+                    if (GetAsyncKeyState(0x58)!=0 && GetAsyncKeyState(VK_SPACE)==0 )
+                    {
+                        if (leftMovement&&Map1[y][x-1]!='#'&&Map1[y][x-1]!='W'&&Map1[y][x-1]!='L'&&Map1[y][x-1]!='G')
+                        {
+                            x--;
+                            Map1[y][x]='(';
+
+                        }
+                        else if(Map1[y][x-1]=='G')
+                        {
+                            yourHealthT4-=100;
+                        }
+                        else if(Map1[y][x-1]=='W')
+                        {
+
+                            yourHealthT1-=100;
+                        }
+                        else if(Map1[y][x-1]=='L')
+                        {
+                            yourHealthT3-=100;
+                        }
+
+
+
+                        if(rightMovement&&Map1[y][x+1]!='#'&&Map1[y][x+1]!='W'&&Map1[y][x+1]!='L'&&Map1[y][x+1]!='G')
+                        {
+                            x++;
+                            Map1[y][x]=')';
+
+                        }
+                         else if(Map1[y][x+1]=='G')
+                        {
+                            yourHealthT4-=100;
+                        }
+                        else if(Map1[y][x+1]=='W')
+                        {
+
+                            yourHealthT1-=100;
+                        }
+                        else if(Map1[y][x+1]=='L')
+                        {
+                            yourHealthT3-=100;
+                        }
+
+                        if(upMovement&&Map1[y-1][x]!='#'&&Map1[y-1][x]!='W'&&Map1[y-1][x]!='L'&&Map1[y-1][x]!='G')
+                        {
+                            y--;
+                            Map1[y][x]='^';
+
+                        }
+                        else   if(Map1[y-1][x]=='G')
+                        {
+                            yourHealthT4-=100;
+                        }
+                        else if(Map1[y-1][x]=='W')
+                        {
+                            yourHealthT1-=100;
+                        }
+                        else if(Map1[y-1][x]=='L')
+                        {
+                            yourHealthT3-=100;
+                        }
+
+                        if(downMovement&&Map1[y+1][x]!='#'&&Map1[y+1][x]!='W'&&Map1[y+1][x]!='L'&&Map1[y+1][x]!='G')
+                        {
+                            y++;
+                            Map1[y][x]='.';
+                        }
+                         else  if(Map1[y+1][x]=='G')
+                        {
+                            yourHealthT4-=100;
+                        }
+                        else if(Map1[y+1][x]=='W')
+                        {
+
+                            yourHealthT1-=100;
+                        }
+                        else if(Map1[y+1][x]=='L')
+                        {
+                            yourHealthT3-=100;
+                        }
+
+                    }
+
+
+                    break;
+                      
+                    case 'L':
+
