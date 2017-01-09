@@ -1,14 +1,16 @@
 #include <iostream>
 #include "windows.h"
 #include"Pro.h"
+#include<time.h>
 
 using namespace std;
 
 int main()
 {
-    int x,y;
+    cout<<"Alegeti Dificulatea n>=25 :";
+    cin>>n;
+    srand(time(NULL));
     system("color 0B");
-
     while (gameEnd==false)
     {
         system("cls");
@@ -19,7 +21,7 @@ int main()
             cout<<Map1[i] << endl;
 
         }
-        cout<<"Health"<<yourHealthT1<<"/"<<maxHealth<<"          "<<"Health"<<yourHealthT2<<"/"<<maxHealth;
+        cout<<"T1Health"<<yourHealthT1<<"/"<<maxHealth<<"       "<<"T2Health"<<yourHealthT2<<"/"<<maxHealth<<"       "<<"T3Health"<<yourHealthT3<<"/"<<maxHealth<<"       "<<"T4Health"<<yourHealthT4<<"/"<<maxHealth;
         for( y=0; y<25; y++)
         {
             for( x=0; x<63; x++)
@@ -102,17 +104,28 @@ int main()
                     if (GetAsyncKeyState(VK_SPACE)!=0 && GetAsyncKeyState(0x58)==0 )
                     {
 
-                        if (leftMovement2&&Map1[y][x-1]!='#'&&Map1[y][x-1]!='R')
+                        if (leftMovement2&&Map1[y][x-1]!='#'&&Map1[y][x-1]!='R'&&Map1[y][x-1]!='L'&&Map1[y][x-1]!='G')
                         {
                             x--;
                             Map1[y][x]='(';
 
                         }
-                        else if(Map1[y][x-1]=='R')
+                        else if(Map1[y][x-1]=='G')
                         {
+
                             yourHealthT2-=100;
                         }
-                        if(rightMovement2&&Map1[y][x+1]!='#'&&Map1[y][x+1]!='R')
+                        else if(Map1[y][x-1]=='L')
+                        {
+                            yourHealthT3-=100;
+                        }
+                        else if(Map1[y][x-1]=='R')
+                        {
+                            yourHealthT4-=100;
+                        }
+
+
+                        if(rightMovement2&&Map1[y][x+1]!='#'&&Map1[y][x+1]!='R'&&Map1[y][x+1]!='L'&&Map1[y][x+1]!='G')
                         {
                             x++;
                             Map1[y][x]=')';
@@ -120,9 +133,18 @@ int main()
                         }
                         else if(Map1[y][x+1]=='R')
                         {
+
                             yourHealthT2-=100;
                         }
-                        if(upMovement2&&Map1[y-1][x]!='#'&&Map1[y-1][x]!='R')
+                        else if(Map1[y][x+1]=='L')
+                        {
+                            yourHealthT3-=100;
+                        }
+                        else if(Map1[y][x+1]=='G')
+                        {
+                            yourHealthT4-=100;
+                        }
+                        if(upMovement2&&Map1[y-1][x]!='#'&&Map1[y-1][x]!='R'&&Map1[y-1][x]!='L'&&Map1[y-1][x]!='G')
                         {
                             y--;
                             Map1[y][x]='^';
@@ -132,16 +154,32 @@ int main()
                         {
                             yourHealthT2-=100;
                         }
-                        if(downMovement2&&Map1[y+1][x]!='#'&&Map1[y+1][x]!='R')
+                        else if(Map1[y-1][x]=='L')
+                        {
+                            yourHealthT3-=100;
+                        }
+                        else   if(Map1[y-1][x]=='G')
+                        {
+                            yourHealthT4-=100;
+                        }
+                        if(downMovement2&&Map1[y+1][x]!='#'&&Map1[y+1][x]!='R'&&Map1[y+1][x]!='L'&&Map1[y+1][x]!='G')
                         {
                             y++;
                             Map1[y][x]='.';
                         }
                         else if(Map1[y+1][x]=='R')
                         {
+
                             yourHealthT2-=100;
                         }
-
+                        else if(Map1[y+1][x]=='L')
+                        {
+                            yourHealthT3-=100;
+                        }
+                        else  if(Map1[y+1][x]=='G')
+                        {
+                            yourHealthT4-=100;
+                        }
 
                     }
 
@@ -149,233 +187,5 @@ int main()
 
 
                     break;
-                case 'R' :
-
-                    if(GetAsyncKeyState(0x41)!=0&& GetAsyncKeyState(0x58)==0)
-                    {
-
-                        left();
-                        int newX= x-1;
-                        switch(Map1[y][newX])
-                        {
-
-                        case ' ':
-
-                            Map1[y][x]=' ';
-                            x--;
-                            Map1[y][newX]='R';
-
-                            break;
-                        }
-
-
-                    }
-                    if(GetAsyncKeyState(0x53)!=0&& GetAsyncKeyState(0x58)==0)
-                    {
-
-                        down();
-                        int newY= y+1;
-                        switch(Map1[newY][x])
-                        {
-
-                        case ' ':
-
-                            Map1[newY][x]=' ';
-                            y++;
-                            Map1[newY][x]='R';
-                            Map1[newY-1][x]=' ';
-
-                            break;
-                        }
-
-
-                    }
-                    if(GetAsyncKeyState(0x57)!=0&& GetAsyncKeyState(0x58)==0)
-                    {
-
-                        up();
-                        int newY= y-1;
-
-                        switch(Map1[newY][x])
-                        {
-
-                        case ' ':
-
-                            Map1[newY][x]=' ';
-                            y--;
-                            Map1[newY][x]='R';
-                            Map1[newY+1][x]=' ';
-
-                            break;
-                        }
-
-
-                    }
-                    if (GetAsyncKeyState(0x44)!=0&&GetAsyncKeyState(0x58)==0)
-                    {
-                        right();
-                        int newX = x+1;
-
-                        switch (Map1[y][newX])
-                        {
-
-                        case ' ':
-                            Map1[y][x]=' ';
-                            x++;
-                            Map1[y][newX]='R';
-
-                            break;
-                        }
-
-                    }
-                    if (GetAsyncKeyState(0x58)!=0 && GetAsyncKeyState(VK_SPACE)==0 )
-                    {
-                        if (leftMovement&&Map1[y][x-1]!='#'&&Map1[y][x-1]!='W')
-                        {
-                            x--;
-                            Map1[y][x]='(';
-
-                        }
-                        else if(Map1[y][x-1]=='W')
-                        {
-                            yourHealthT1-=100;
-                        }
-                        if(rightMovement&&Map1[y][x+1]!='#'&&Map1[y][x+1]!='W')
-                        {
-                            x++;
-                            Map1[y][x]=')';
-
-                        }
-                        else if(Map1[y][x+1]=='W')
-                        {
-                            yourHealthT1-=100;
-                        }
-                        if(upMovement&&Map1[y-1][x]!='#'&&Map1[y-1][x]!='W')
-                        {
-                            y--;
-                            Map1[y][x]='^';
-
-                        }
-                        else if(Map1[y-1][x]=='W')
-                        {
-                            yourHealthT1-=100;
-                        }
-                        if(downMovement&&Map1[y+1][x]!='#'&&Map1[y+1][x]!='W')
-                        {
-                            y++;
-                            Map1[y][x]='.';
-                        }
-                        else if(Map1[y+1][x]=='W')
-                        {
-                            yourHealthT1-=100;
-                        }
-
-
-
-                    }
-
-
-                    break;
-
-                case ')':
-                    Map1[y][x]=' ';
-                    x++;
-                    if (Map1[y][x]!='#' && Map1[y][x]!='W' && Map1[y][x]!='R')
-                    {
-                        Map1[y][x]=')';
-
-
-                    }
-                    else if(Map1[y][x]=='W')
-                    {
-                        yourHealthT1-=100;
-                    }
-                    else if(Map1[y][x]=='R')
-                    {
-                        yourHealthT2-=100;
-                    }
-
-                    break;
-
-                case '(':
-                    Map1[y][x]=' ';
-                    x--;
-                    if (Map1[y][x]!='#' && Map1[y][x]!='W' && Map1[y][x]!='R')
-                    {
-                        Map1[y][x]='(';
-
-
-                    }
-                    else if(Map1[y][x]=='W')
-                    {
-                        yourHealthT1-=100;
-                    }
-                    else if(Map1[y][x]=='R')
-                    {
-                        yourHealthT2-=100;
-                    }
-
-                    break;
-
-                case '^':
-                    Map1[y][x]=' ';
-                    y--;
-                    if (Map1[y][x]!='#' && Map1[y][x]!='W' && Map1[y][x]!='R')
-                    {
-                        Map1[y][x]='^';
-
-
-                    }
-                    else if(Map1[y][x]=='W')
-                    {
-                        yourHealthT1-=100;
-                    }
-                    else if(Map1[y][x]=='R')
-                    {
-                        yourHealthT2-=100;
-                    }
-
-                    break;
-
-                case '.':
-                    Map1[y][x]=' ';
-                    y++;
-                    if (Map1[y][x]!='#' && Map1[y][x]!='W' && Map1[y][x]!='R')
-                    {
-                        Map1[y][x]='.';
-
-
-                    }
-                    else if(Map1[y][x]=='W')
-                    {
-                        yourHealthT1-=100;
-                    }
-                    else if(Map1[y][x]=='R')
-                    {
-                        yourHealthT2-=100;
-                    }
-
-                    break;
-
-                }
-
-            }
-        }
-        if(yourHealthT1<=0)
-        {
-            gameEnd=true;
-
-        }
-        if(yourHealthT2<=0)
-        {
-            gameEnd=true;
-        }
-        Sleep(gamespeed);
-
-    }
-    system("cls");
-
-    cout<<"GAME OVER";
-    system("pause>nul");
-    return 0;
-}
+                        
+                    case 'R' :
