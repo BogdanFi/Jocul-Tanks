@@ -14,7 +14,7 @@ bool upMovement2=false;
 bool downMovement2=false;
 
 int randomNum;
-int randomNum1;
+
 
 void left2()
 {
@@ -95,7 +95,7 @@ char Map1[MAX_SPACE][MAX_SPACE]=
     "#     L         ####                               #   G    # #",
     "#                                                  #        # #",
     "#                         #######          #########        # #",
-    "#                 ####          #                          #  #",
+    "#                 ####          #                           # #",
     "#         #          #          #    ########  #############  #",
     "#       #            #                #               ##      #",
     "#     #              #                #               ##      #",
