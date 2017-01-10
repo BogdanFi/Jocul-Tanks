@@ -290,6 +290,7 @@ int main()
                         }
 
 
+                        
 
                         if(rightMovement&&Map1[y][x+1]!='#'&&Map1[y][x+1]!='W'&&Map1[y][x+1]!='L'&&Map1[y][x+1]!='G')
                         {
@@ -355,4 +356,167 @@ int main()
                     break;
                       
                     case 'L':
+                    randomNum=rand()%n+1;
+
+                    if(randomNum==1)
+                    {
+                        if(Map1[y][x-1]!='#'&&Map1[y][x-1]!='W'&&Map1[y][x-1]!='R'&&Map1[y][x-1]!='G')
+                        {
+                            x--;
+                            Map1[y][x]='(';
+                        }
+                        else if(Map1[y][x-1]=='W')
+                        {
+
+                            yourHealthT1-=100;
+                        }
+                        else if(Map1[y][x-1]=='R')
+                        {
+                            yourHealthT2-=100;
+                        }
+                        else if(Map1[y][x-1]=='G')
+                        {
+                            yourHealthT4-=100;
+                        }
+                    }
+                    if(randomNum==2)
+                    {
+                        if(Map1[y][x+1]!='#'&&Map1[y][x+1]!='W'&&Map1[y][x+1]!='R'&&Map1[y][x+1]!='G')
+                        {
+                            x++;
+                            Map1[y][x]=')';
+                        }
+                        else if(Map1[y][x+1]=='W')
+                        {
+
+                            yourHealthT1-=100;
+                        }
+                        else if(Map1[y][x+1]=='R')
+                        {
+                            yourHealthT2-=100;
+                        }
+                        else if(Map1[y][x+1]=='G')
+                        {
+                            yourHealthT4-=100;
+                        }
+                    }
+                    if(randomNum==3)
+                    {
+                        if(Map1[y-1][x]!='#'&&Map1[y-1][x]!='W'&&Map1[y-1][x]!='R'&&Map1[y-1][x]!='G')
+                        {
+                            y--;
+                            Map1[y][x]='^';
+                        }
+                        else if(Map1[y-1][x]=='W')
+                        {
+                            yourHealthT1-=100;
+                        }
+                        else if(Map1[y-1][x]=='R')
+                        {
+                            yourHealthT2-=100;
+                        }
+                        else   if(Map1[y-1][x]=='G')
+                        {
+                            yourHealthT4-=100;
+                        }
+
+                    }
+                    if(randomNum==4)
+                    {
+                        if(Map1[y+1][x]!='#'&&Map1[y+1][x]!='W'&&Map1[y+1][x]!='R'&&Map1[y+1][x]!='G')
+                        {
+                            y++;
+                            Map1[y][x]='.';
+                        }
+                        else if(Map1[y+1][x]=='W')
+                        {
+
+                            yourHealthT1-=100;
+                        }
+                        else if(Map1[y+1][x]=='R')
+                        {
+                            yourHealthT2-=100;
+                        }
+                        else  if(Map1[y+1][x]=='G')
+                        {
+                            yourHealthT4-=100;
+                        }
+
+                    }
+
+                    if(randomNum==10)
+                    {
+                        int newX= x-1;
+                        switch(Map1[y][newX])
+                        {
+
+                        case ' ':
+
+                            Map1[y][x]=' ';
+                            x--;
+                            Map1[y][newX]='L';
+
+
+                            break;
+                        }
+                    }
+                    if(randomNum==11)
+                    {
+                        int newY= y+1;
+                        switch(Map1[newY][x])
+                        {
+
+                        case ' ':
+
+                            Map1[newY][x]=' ';
+                            y++;
+                            Map1[newY][x]='L';
+                            Map1[newY-1][x]=' ';
+
+                            break;
+                        }
+
+
+                    }
+                    if(randomNum==12)
+                    {
+                        int newY= y-1;
+
+                        switch(Map1[newY][x])
+                        {
+
+                        case ' ':
+
+                            Map1[newY][x]=' ';
+                            y--;
+                            Map1[newY][x]='L';
+                            Map1[newY+1][x]=' ';
+
+                            break;
+                        }
+
+                    }
+                    if(randomNum==13)
+                    {
+                        int newX = x+1;
+                        switch (Map1[y][newX])
+                        {
+
+                        case ' ':
+                            Map1[y][x]=' ';
+                            ++x;
+                            Map1[y][newX]='L';
+
+                            break;
+                        }
+
+                    }
+
+
+                    break;
+
+                case '$':
+
+
+                    break;
 
