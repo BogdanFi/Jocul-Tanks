@@ -30,3 +30,9 @@ int main()
     system("cls");
     srand(time(NULL));
     system("color 0E");
+    while(1){
+    clear_screen();
+    system("color 0C");
+    cout<<"       Press 1 to play with friends (two players)"<<endl;
+    cout<<"       Press 2 to play a game versus computer"<<endl;
+    cout<<"       Press 3 to exit"<<endl;
