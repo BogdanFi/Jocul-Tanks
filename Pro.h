@@ -1,7 +1,7 @@
 #ifndef PRO_H_INCLUDED
 #define PRO_H_INCLUDED
 #define MAX_SPACE 100
-
+#define DEFAULT_HEALTH 500
 int x=0,y=0,n=1;
 bool gameEnd=false;
 bool leftMovement=false;
@@ -14,7 +14,7 @@ bool upMovement2=false;
 bool downMovement2=false;
 
 int randomNum;
-
+int randomNum1;
 
 void left2()
 {
@@ -77,6 +77,11 @@ void down()
     upMovement=false;
     downMovement=true;
 }
+void clear_screen (){                           	//Actually, this func does not clear,
+  COORD coord = {0};                                //it just set the cursor at the
+  HANDLE h = GetStdHandle ( STD_OUTPUT_HANDLE );    // top left corner of the screen
+  SetConsoleCursorPosition ( h, coord );
+}
 int maxHealth=500;
 int yourHealthT1=maxHealth;
 int yourHealthT2=maxHealth;
@@ -95,7 +100,7 @@ char Map1[MAX_SPACE][MAX_SPACE]=
     "#     L         ####                               #   G    # #",
     "#                                                  #        # #",
     "#                         #######          #########        # #",
-    "#                 ####          #                           # #",
+    "#                 ####          #                          #  #",
     "#         #          #          #    ########  #############  #",
     "#       #            #                #               ##      #",
     "#     #              #                #               ##      #",
@@ -109,7 +114,17 @@ char Map1[MAX_SPACE][MAX_SPACE]=
     "#                 #      #          #######   #               #",
     "###############################################################"
 };
-int gamespeed= 20;
+
+void resetGame()
+{
+    gameEnd=false;
+    yourHealthT1=maxHealth;
+    yourHealthT2=maxHealth;
+    yourHealthT3=maxHealth;
+    yourHealthT4=maxHealth;
+}
+int gamespeed= 60;
+int gameMode;
 
 
 
