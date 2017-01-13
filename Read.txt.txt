@@ -1,0 +1,23 @@
+Jocul Tanks clasic, 2D. 
+
+Un numãr de tancuri (între 2 ?i 4) se vor plimba într-o
+matrice 2d cu obstacole ?i vor încerca sã se doboare trãgând proiectile unul în altul.
+
+Specifica?ii minime:
+
+- Tancurile au 5 vie?i - pot suporta 5 lovituri pânã când sunt doborâte.
+- Pe harta va aparea un power up:
+                 - Viata++
+
+- Jucãtorul va avea posibilitatea de a juca împotriva calculatorului cu pânã la 3
+adversari controla?i prin algoritmi de AI cu dificultã?i diverse sau împotriva unui
+prieten.
+
+- Harta va fi generatã random sau incãrcatã dintr-un set predefinit de hãr?i.
+
+W-Reprezinta primul tanc.
+R-Reprezinta al doilea tanc.
+L-Reprezinta al treilea tanc.
+G-Reprezinta al patrulea tanc.
+
+Proiectul contine un fisier header numit  "Pro.h" in care sunt diverse functii ajutatoare si declararea variabilelor.
