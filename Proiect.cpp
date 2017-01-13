@@ -14,7 +14,7 @@ using namespace std;
 
 int main()
 
- {  system("color 0A");
+ {  system("color 03");
 
     for(int i=0;i<=12;i++)
 
@@ -52,13 +52,13 @@ int main()
 
     srand(time(NULL));
 
-    system("color 0E");
+    system("color 0B");
 
     while(1){
 
     clear_screen();
 
-    system("color 0C");
+    system("color 0B");
 
     cout<<"       Press 1 to play with friends (two players)"<<endl;
 

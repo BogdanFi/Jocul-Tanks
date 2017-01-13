@@ -5,15 +5,23 @@
 #define MAX_SPACE 100
 
 #define DEFAULT_HEALTH 500
+<<<<<<< HEAD
 
 int x=0,y=0,i,Dificultate;
 
+=======
+int x=0,y=0,i,Dificultate;
+>>>>>>> origin/master
 bool start;
 
 bool gameEnd=false;
+<<<<<<< HEAD
 
 int maxHealth=DEFAULT_HEALTH;
 
+=======
+int maxHealth=DEFAULT_HEALTH;
+>>>>>>> origin/master
 bool leftMovement=false;
 
 bool rightMovement=false;
@@ -35,6 +43,7 @@ int powerUpPosition1;
 int powerUpPosition2;
 
 int randomNum;
+<<<<<<< HEAD
 
 int powerUpPosition_Heal1;
 
@@ -48,6 +57,14 @@ int yourHealthT3=DEFAULT_HEALTH;
 
 int yourHealthT4=DEFAULT_HEALTH;
 
+=======
+int powerUpPosition_Heal1;
+int powerUpPosition_Heal2;
+int yourHealthT1=DEFAULT_HEALTH;
+int yourHealthT2=DEFAULT_HEALTH;
+int yourHealthT3=DEFAULT_HEALTH;
+int yourHealthT4=DEFAULT_HEALTH;
+>>>>>>> origin/master
 void left2()
 
 {
@@ -180,8 +197,11 @@ void clear_screen (){                           	//Actually, this func does not 
 
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/master
 void resetGame()
 
 {
