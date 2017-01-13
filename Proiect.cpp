@@ -34,6 +34,7 @@ int main()
     cout<<"       Press 3 to exit"<<endl;
     if(GetAsyncKeyState(0x31)!=0){
             resetGame();
+            system ("cls");
             clear_screen();
             char Map1[MAX_SPACE][MAX_SPACE]=
 {
