@@ -35,7 +35,7 @@ int powerUpPosition1;
 int powerUpPosition2;
 
 int randomNum;
-<<<<<<< HEAD
+
 
 int powerUpPosition_Heal1;
 
@@ -49,14 +49,14 @@ int yourHealthT3=DEFAULT_HEALTH;
 
 int yourHealthT4=DEFAULT_HEALTH;
 
-=======
+
 int powerUpPosition_Heal1;
 int powerUpPosition_Heal2;
 int yourHealthT1=DEFAULT_HEALTH;
 int yourHealthT2=DEFAULT_HEALTH;
 int yourHealthT3=DEFAULT_HEALTH;
 int yourHealthT4=DEFAULT_HEALTH;
->>>>>>> origin/master
+
 void left2()
 
 {
@@ -189,11 +189,7 @@ void clear_screen (){                           	//Actually, this func does not 
 
 }
 
-<<<<<<< HEAD
 
-
-=======
->>>>>>> origin/master
 void resetGame()
 
 {
