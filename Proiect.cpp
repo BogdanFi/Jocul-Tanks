@@ -251,9 +251,9 @@ int main()
                   
                    
                  case ' ':
-                    powerUpPosition1=rand()%1000+1;
-                    powerUpPosition2=rand()%1000+995;
-                    if (powerUpPosition1==powerUpPosition2)
+                    powerUpPosition_Heal1=rand()%1000+1;
+                    powerUpPosition_Heal2=rand()%1000+995;
+                    if (powerUpPosition_Heal1==powerUpPosition_Heal2)
                         Map1[y][x]='+';
                         break;
                  case '+':
