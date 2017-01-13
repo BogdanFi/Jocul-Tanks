@@ -6,7 +6,7 @@
 using namespace std;
 
 int main()
- {  system("color 0A");
+ {  system("color 03");
     for(int i=0;i<=12;i++)
     cout<<endl;
     cout<<"                                                 #################";
@@ -25,10 +25,10 @@ int main()
     cout<<endl<<endl<<endl;
     system("cls");
     srand(time(NULL));
-    system("color 0E");
+    system("color 0B");
     while(1){
     clear_screen();
-    system("color 0C");
+    system("color 0B");
     cout<<"       Press 1 to play with friends (two players)"<<endl;
     cout<<"       Press 2 to play a game versus computer"<<endl;
     cout<<"       Press 3 to exit"<<endl;
