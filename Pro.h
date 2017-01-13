@@ -2,7 +2,7 @@
 #define PRO_H_INCLUDED
 #define MAX_SPACE 100
 #define DEFAULT_HEALTH 500
-int x=0,y=0,Dificultate;
+int x=0,y=0,i,Dificultate;
 bool start;
 bool gameEnd=false;
 bool leftMovement=false;
@@ -16,7 +16,7 @@ bool downMovement2=false;
 int powerUpPosition1;
 int powerUpPosition2;
 int randomNum;
-int randomNum1;
+int maxHealth=DEFAULT_HEALTH;
 int yourHealthT1=DEFAULT_HEALTH;
 int yourHealthT2=DEFAULT_HEALTH;
 int yourHealthT3=DEFAULT_HEALTH;
