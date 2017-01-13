@@ -50,12 +50,6 @@ int yourHealthT3=DEFAULT_HEALTH;
 int yourHealthT4=DEFAULT_HEALTH;
 
 
-int powerUpPosition_Heal1;
-int powerUpPosition_Heal2;
-int yourHealthT1=DEFAULT_HEALTH;
-int yourHealthT2=DEFAULT_HEALTH;
-int yourHealthT3=DEFAULT_HEALTH;
-int yourHealthT4=DEFAULT_HEALTH;
 
 void left2()
 
