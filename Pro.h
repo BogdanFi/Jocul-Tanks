@@ -17,9 +17,10 @@ int powerUpPosition1;
 int powerUpPosition2;
 int randomNum;
 int randomNum1;
-int HealthTank_W=500;
-int HealthTank_R=500;
-
+int yourHealthT1;
+int yourHealthT2;
+int yourHealthT3;
+int yourHealthT4;
 void left2()
 {
     leftMovement2=true;
@@ -86,19 +87,10 @@ void clear_screen (){                           	//Actually, this func does not 
   HANDLE h = GetStdHandle ( STD_OUTPUT_HANDLE );    // top left corner of the screen
   SetConsoleCursorPosition ( h, coord );
 }
-<<<<<<< HEAD
-int maxHealth=500;
-int yourHealthT1=maxHealth;
-int yourHealthT2=maxHealth;
-int yourHealthT3=maxHealth;
-int yourHealthT4=maxHealth;
-
-=======
-int yourHealthT1;
-int yourHealthT2;
-int yourHealthT3;
-int yourHealthT4;
->>>>>>> origin/master
+int yourHealthT1=DEFAULT_HEALTH;
+int yourHealthT2=DEFAULT_HEALTH;
+int yourHealthT3=DEFAULT_HEALTH;
+int yourHealthT4=DEFAULT_HEALTH;
 void resetGame()
 {
     gameEnd=false;
