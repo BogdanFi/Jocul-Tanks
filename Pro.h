@@ -86,19 +86,26 @@ void clear_screen (){                           	//Actually, this func does not 
   HANDLE h = GetStdHandle ( STD_OUTPUT_HANDLE );    // top left corner of the screen
   SetConsoleCursorPosition ( h, coord );
 }
+<<<<<<< HEAD
 int maxHealth=500;
 int yourHealthT1=maxHealth;
 int yourHealthT2=maxHealth;
 int yourHealthT3=maxHealth;
 int yourHealthT4=maxHealth;
 
+=======
+int yourHealthT1;
+int yourHealthT2;
+int yourHealthT3;
+int yourHealthT4;
+>>>>>>> origin/master
 void resetGame()
 {
     gameEnd=false;
-    yourHealthT1=maxHealth;
-    yourHealthT2=maxHealth;
-    yourHealthT3=maxHealth;
-    yourHealthT4=maxHealth;
+    yourHealthT1=DEFAULT_HEALTH;
+    yourHealthT2=DEFAULT_HEALTH;
+    yourHealthT3=DEFAULT_HEALTH;
+    yourHealthT4=DEFAULT_HEALTH;
 }
 int gamespeed= 60;
 int gameMode;
