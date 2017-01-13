@@ -2,7 +2,8 @@
 #define PRO_H_INCLUDED
 #define MAX_SPACE 100
 #define DEFAULT_HEALTH 500
-int x=0,y=0,n=1;
+int x=0,y=0,Dificultate;
+bool start;
 bool gameEnd=false;
 bool leftMovement=false;
 bool rightMovement=false;
@@ -82,18 +83,17 @@ void clear_screen (){                           	//Actually, this func does not 
   HANDLE h = GetStdHandle ( STD_OUTPUT_HANDLE );    // top left corner of the screen
   SetConsoleCursorPosition ( h, coord );
 }
-int maxHealth=500;
-int yourHealthT1=maxHealth;
-int yourHealthT2=maxHealth;
-int yourHealthT3=maxHealth;
-int yourHealthT4=maxHealth;
+int yourHealthT1;
+int yourHealthT2;
+int yourHealthT3;
+int yourHealthT4;
 void resetGame()
 {
     gameEnd=false;
-    yourHealthT1=maxHealth;
-    yourHealthT2=maxHealth;
-    yourHealthT3=maxHealth;
-    yourHealthT4=maxHealth;
+    yourHealthT1=DEFAULT_HEALTH;
+    yourHealthT2=DEFAULT_HEALTH;
+    yourHealthT3=DEFAULT_HEALTH;
+    yourHealthT4=DEFAULT_HEALTH;
 }
 int gamespeed= 60;
 int gameMode;
