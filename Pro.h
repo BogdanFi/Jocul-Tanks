@@ -5,23 +5,15 @@
 #define MAX_SPACE 100
 
 #define DEFAULT_HEALTH 500
-<<<<<<< HEAD
+
 
 int x=0,y=0,i,Dificultate;
-
-=======
-int x=0,y=0,i,Dificultate;
->>>>>>> origin/master
 bool start;
 
 bool gameEnd=false;
-<<<<<<< HEAD
 
 int maxHealth=DEFAULT_HEALTH;
 
-=======
-int maxHealth=DEFAULT_HEALTH;
->>>>>>> origin/master
 bool leftMovement=false;
 
 bool rightMovement=false;
