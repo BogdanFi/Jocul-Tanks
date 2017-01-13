@@ -16,6 +16,8 @@ bool downMovement2=false;
 int powerUpPosition1;
 int powerUpPosition2;
 int randomNum;
+int powerUpPosition_Heal1;
+int powerUpPosition_Heal2;
 int maxHealth=DEFAULT_HEALTH;
 int yourHealthT1=DEFAULT_HEALTH;
 int yourHealthT2=DEFAULT_HEALTH;
