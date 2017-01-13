@@ -5,6 +5,7 @@
 int x=0,y=0,i,Dificultate;
 bool start;
 bool gameEnd=false;
+int maxHealth=DEFAULT_HEALTH;
 bool leftMovement=false;
 bool rightMovement=false;
 bool upMovement=false;
@@ -13,8 +14,9 @@ bool leftMovement2=false;
 bool rightMovement2=false;
 bool upMovement2=false;
 bool downMovement2=false;
+int powerUpPosition1;
+int powerUpPosition2;
 int randomNum;
-int randomNum1;
 int powerUpPosition_Heal1;
 int powerUpPosition_Heal2;
 int yourHealthT1=DEFAULT_HEALTH;
