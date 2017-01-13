@@ -13,9 +13,13 @@ using namespace std;
 
 
 int main()
+<<<<<<< HEAD
 
  {  system("color 03");
 
+=======
+ {  system("color 03");
+>>>>>>> origin/master
     for(int i=0;i<=12;i++)
 
     cout<<endl;
@@ -51,15 +55,23 @@ int main()
     system("cls");
 
     srand(time(NULL));
+<<<<<<< HEAD
 
     system("color 0B");
 
+=======
+    system("color 0B");
+>>>>>>> origin/master
     while(1){
 
     clear_screen();
+<<<<<<< HEAD
 
     system("color 0B");
 
+=======
+    system("color 0B");
+>>>>>>> origin/master
     cout<<"       Press 1 to play with friends (two players)"<<endl;
 
     cout<<"       Press 2 to play a game versus computer"<<endl;
