@@ -249,7 +249,43 @@ int main()
 
                     break;
                   
-                   case 'R' :
+                   
+                 case ' ':
+                    powerUpPosition1=rand()%1000+1;
+                    powerUpPosition2=rand()%1000+995;
+                    if (powerUpPosition1==powerUpPosition2)
+                        Map1[y][x]='+';
+                        break;
+                 case '+':
+                    if (Map1[y-1][x]=='W'||Map1[y+1][x]=='W'||Map1[y][x-1]=='W'||Map1[y][x+1]=='W')
+                    {
+                        Map1[y][x]=' ';
+                        if (yourHealthT1<=400)
+                            yourHealthT1+=100;
+                    }
+                    if (Map1[y-1][x]=='R'||Map1[y+1][x]=='R'||Map1[y][x-1]=='R'||Map1[y][x+1]=='R')
+                    {
+                        Map1[y][x]=' ';
+                        if (yourHealthT2<=400)
+                            yourHealthT2+=100;
+                    }
+                    if (Map1[y-1][x]=='L'||Map1[y+1][x]=='L'||Map1[y][x-1]=='L'||Map1[y][x+1]=='L')
+                    {
+                        Map1[y][x]=' ';
+                       if (yourHealthT3<=400)
+                            yourHealthT3+=100;
+                    }
+                    if (Map1[y-1][x]=='G'||Map1[y+1][x]=='G'||Map1[y][x-1]=='G'||Map1[y][x+1]=='G')
+                    {
+                        Map1[y][x]=' ';
+                        if (yourHealthT4<=400)
+                            yourHealthT4+=100;
+                    }
+
+
+
+                break;
+                 case 'R' :
 
                     if(GetAsyncKeyState(0x41)!=0&& GetAsyncKeyState(0x58)==0)
                     {
