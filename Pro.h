@@ -2,7 +2,8 @@
 #define PRO_H_INCLUDED
 #define MAX_SPACE 100
 #define DEFAULT_HEALTH 500
-int x=0,y=0,n=1;
+int x=0,y=0,Dificultate;
+bool start;
 bool gameEnd=false;
 bool leftMovement=false;
 bool rightMovement=false;
@@ -12,9 +13,12 @@ bool leftMovement2=false;
 bool rightMovement2=false;
 bool upMovement2=false;
 bool downMovement2=false;
-
+int powerUpPosition1;
+int powerUpPosition2;
 int randomNum;
 int randomNum1;
+int HealthTank_W=500;
+int HealthTank_R=500;
 
 void left2()
 {
@@ -87,33 +91,6 @@ int yourHealthT1=maxHealth;
 int yourHealthT2=maxHealth;
 int yourHealthT3=maxHealth;
 int yourHealthT4=maxHealth;
-char Map1[MAX_SPACE][MAX_SPACE]=
-{
-    "###############################################################",
-    "#                                                             #",
-    "#                                      #                      #",
-    "#                             R        #                      #",
-    "#     ###########             ############         #          #",
-    "#               #                                  #        # #",
-    "#               #               #                  #        # #",
-    "#               #         #######                  #        # #",
-    "#     L         ####                               #   G    # #",
-    "#                                                  #        # #",
-    "#                         #######          #########        # #",
-    "#                 ####          #                          #  #",
-    "#         #          #          #    ########  #############  #",
-    "#       #            #                #               ##      #",
-    "#     #              #                #               ##      #",
-    "#   #    #################            #               ##      #",
-    "# #                             W                     ##      #",
-    "#   #                                                 #########",
-    "#     #                  #                    #       ##      #",
-    "#       #                                     #     #    #    #",
-    "#         # # # # #      #          #######   #   #        #  #",
-    "#                 #      #                    # #           # #",
-    "#                 #      #          #######   #               #",
-    "###############################################################"
-};
 
 void resetGame()
 {
